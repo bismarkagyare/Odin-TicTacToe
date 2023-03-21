@@ -27,19 +27,39 @@ h1 {
 }
 
 button {
-  background-color: #333333;
-  border: none;
+  background-color: #fff;
+  border: 3px solid #333;
   border-radius: 5px;
-  color: #fff;
+  color: #333;
   cursor: pointer;
-  font-size: 24px;
-  font-weight: bold;
+  font-size: 1.5rem;
+  font-weight: bolder;
   font-family: 'Open Sans', sans-serif;
-  margin-top: 50px;
-  padding: 15px 30px;
+  margin-top: 40px;
+  padding: 8px 12px;
   transition: background-color 0.3s ease;
 }
 
 button:hover {
-  background-color: #555;
+  background-color: #faf8ff;
+}
+
+.input-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* margin: 20px; */
+  /* padding: 20px; */
+	border-radius: 5px;
+}
+
+input[type=text] {
+  padding: 10px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  margin: 20px;
+  width: 160px;
+  outline: none;
+  font-size: 1.2rem;
+  font-family: 'Open Sans', sans-serif;
 }
