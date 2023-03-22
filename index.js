@@ -48,6 +48,13 @@ const createPlayer = (name, sign) => {
   return {name, sign};
 }
 
+const displayWinnerMessage = (() => {
+  const renderMessage = (message) => {
+    document.querySelector('.win-message').innerHTML = message;
+  }
+
+  return {renderMessage};
+})();
 
 // game logic reside here
 const gameLogic = (() => {
@@ -58,7 +65,7 @@ const gameLogic = (() => {
   const start = () => {
     players = [
       createPlayer(document.getElementById('player1').value, 'X'),
-      createPlayer(document.getElementById('player1').value, 'O')
+      createPlayer(document.getElementById('player2').value, 'O')
     ];
     gameOver = false;
     currentPlayerIndex = 0;
@@ -80,7 +87,7 @@ const gameLogic = (() => {
     //check for win 
     if (checkForWin(Gameboard.getGameboard(), players[currentPlayerIndex].mark)){
       gameOver = true;
-      displayWinnerMessage.renderMessage(`${players[currentPlayerIndex].name} won`);
+      displayWinnerMessage.renderMessage(`${players[currentPlayerIndex].name} wins the round`);
     } else if (checkForTie(Gameboard.getGameboard())) {
       gameOver = true;
       displayWinnerMessage.renderMessage(`its a tie`);
