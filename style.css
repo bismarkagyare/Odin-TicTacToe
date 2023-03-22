@@ -48,8 +48,6 @@ button:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  /* margin: 20px; */
-  /* padding: 20px; */
 	border-radius: 5px;
 }
 
@@ -75,7 +73,7 @@ input[type=text] {
 
 .box {
   text-align: center;
-  font-size: 80px;
+  font-size: 70px;
   /* background-color: #eee; */
 }
 
