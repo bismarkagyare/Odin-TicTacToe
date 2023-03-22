@@ -2,15 +2,14 @@ const Gameboard = (() => {
   let gameboard = ['', '', '', '', '', '', '', '', ''];
 
   const render = () => {
-    let boardHTML = '';
-    gameboard.forEach((box, index) => {
-      boardHTML += `<div class="box grid-cell" id="${index}">${box}</div>`;
-    });
-    document.querySelector('.gameboard').innerHTML = boardHTML;
-    document.querySelector('.container').style.display = 'none';
-    document.querySelector('.gameboard').classList.remove('hidden');
-  }
-
+    const boardContainer = document.querySelector('.gameboard');
+    boardContainer.innerHTML = gameboard.map((box, index) =>
+      `<div class="box grid-cell" id="${index}">${box}</div>`
+    ).join('');
+    document.querySelector('.container').hidden = true;
+    boardContainer.classList.remove('hidden');
+  };
+  
   const createGrid = () => {
     const boxes = document.querySelectorAll('.box');
     boxes.forEach((box, i) => {
