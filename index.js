@@ -87,7 +87,7 @@ const gameLogic = (() => {
     //check for win 
     if (checkForWin(Gameboard.getGameboard(), players[currentPlayerIndex].mark)){
       gameOver = true;
-      displayWinnerMessage.renderMessage(`${players[currentPlayerIndex].name} wins the round`);
+      displayWinnerMessage.renderMessage(`${players[currentPlayerIndex].name} wins the round!`);
     } else if (checkForTie(Gameboard.getGameboard())) {
       gameOver = true;
       displayWinnerMessage.renderMessage(`its a tie`);
