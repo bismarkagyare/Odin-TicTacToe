@@ -37,9 +37,9 @@ There are several ways to improve this game. In the future, i plan to add a scor
 
 ## Built With
 
-![My SVG Image](./images/html-img.svg)
-![My SVG Image](./images/css-img.svg)
-![My SVG Image](./images/js-img.svg)
+* ![My SVG Image](./images/html-img.svg)
+* ![My SVG Image](./images/css-img.svg)
+* ![My SVG Image](./images/js-img.svg)
 
 
 ## Credits
