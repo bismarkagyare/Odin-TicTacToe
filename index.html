@@ -10,11 +10,12 @@
 <body>
   <div class="container">
     <h1>Tic Tac Toe</h1>
-    <div class="input-wrapper">
-      <input type="text" id="player1" placeholder="player 1 name" required>
-      <input type="text" id="player2" placeholder="player 2 name" required>
-    </div>
-    <button id="start-button">Start Game</button>
+    <form class="input-wrapper" onsubmit="return validateForm()">
+      <input type="text" id="player1" name="player1" placeholder="player 1 name" required>
+      <input type="text" id="player2" name="player2" placeholder="player 2 name" required>
+      <!-- <button type="submit" id="start-button">Start Game</button> -->
+    </form>
+    <button id="start-button" type="submit">Start Game</button>
   </div>
 
   <div class="win-message"></div>
