@@ -35,9 +35,12 @@ I also gained a better understanding of the benefits of using module patterns an
 
 There are several ways to improve this game. In the future, i plan to add a scoreboard to keep track of wins and losses, implement an AI player to play against and some cool animations to make the visuals more appealing.
 
-## Technologies used
+## Built With
 
-HTML, CSS and JavaScript
+![My SVG Image](./images/html-img.svg)
+![My SVG Image](./images/css-img.svg)
+![My SVG Image](./images/js-img.svg)
+
 
 ## Credits
 
