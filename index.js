@@ -96,7 +96,16 @@ const gameLogic = (() => {
     
   }
 
-  return {start, handleClick};
+  const restart = () => {
+    for (let i = 0; i < 9; i++) {
+      Gameboard.updateSign(i, '');
+    }
+    Gameboard.render();
+    gameOver = false;
+    document.querySelector('.win-message').innerHTML = '';
+  }
+
+  return {start, handleClick, restart};
 })();
 
 const checkForWin = (board) => {
@@ -128,3 +137,9 @@ const startBtn = document.getElementById('start-button');
 startBtn.addEventListener('click', () => {
   gameLogic.start();
 });
+
+const restartBtn = document.getElementById('restart-button');
+restartBtn.addEventListener('click', () => {
+  gameLogic.restart();
+  Gameboard.createGrid();
+})
