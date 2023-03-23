@@ -23,7 +23,7 @@ I also gained a better understanding of the benefits of using module patterns an
 
 ## Future Improvements
 
-There are several ways to improve this game in the future, such as adding a scoreboard to keep track of wins and losses, implementing an AI player to play against, or adding animations to make the game more visually appealing.
+There are several ways to improve this game. In the future, i plan to add a scoreboard to keep track of wins and losses, implement an AI player to play against and some cool animations to make the visuals more appealing.
 
 ## Technologies used
 
@@ -31,4 +31,4 @@ HTML, CSS and JavaScript
 
 ## Credits
 
-This game was built by Bismark Agyare as part of [The Odin Project](https://www.odinproject.com/lessons/node-path-javascript-tic-tac-toe). If you have any feedback or suggestions for improvement, feel free to contact me at bismarkagyare54@gmail.com
+This game was built by Bismark Agyare as part of [The Odin Project](https://www.theodinproject.com/lessons/node-path-javascript-tic-tac-toe). If you have any feedback or suggestions for improvement, feel free to contact me at bismarkagyare54@gmail.com
