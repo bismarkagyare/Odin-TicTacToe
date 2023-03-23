@@ -93,7 +93,10 @@ const gameLogic = (() => {
       displayWinnerMessage.renderMessage(`its a tie`);
     }
     currentPlayerIndex = currentPlayerIndex === 0 ? 1 : 0;
-    
+
+    if (gameOver) {
+      document.getElementById('restart-button').classList.remove('hidden');
+    }
   }
 
   const restart = () => {
