@@ -3,11 +3,21 @@
 This is a Tic Tac Toe game build with module patterns and factory functions.
 The game can be played by two players, with one being X and the other being O.
 
+![Screenshot of the Tic Tac Toe game](./images/image1.png)
+![Screenshot of the Tic Tac Toe game](./images/image2.png)
+
+
 ## How to play
 
 The game is played on a 3x3 grid. Each player takes turns to place their symbol (X or O) on the grid by clicking on an empty cell. The first player to get three symbols in a row (horizontally, vertically, or diagonally) wins the game. If all cells are filled and no player has won, the game ends in a draw.
 
+You can play live [here](https://bismarkagyare.github.io/Odin-TicTacToe/): 
+
 ## Installation
+
+Clone the repo to your local machine
+git clone https://github.com/bismarkagyare/Odin-TicTacToe.git
+
 
 ## Challenges faced
 
