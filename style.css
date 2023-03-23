@@ -34,7 +34,7 @@ button {
   cursor: pointer;
   font-size: 1.5rem;
   font-weight: bolder;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Righteous', sans-serif;
   margin-top: 40px;
   padding: 8px 12px;
   transition: background-color 0.3s ease;
@@ -107,4 +107,18 @@ input[type=text] {
   margin-bottom: 50px;
   font-size: 1.85rem;
   text-transform: capitalize;
+}
+
+#restart-button {
+  background-color: #333;
+  border: 3px solid #333;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 1.5rem;
+  font-weight: bolder;
+  font-family: 'Righteous', sans-serif;
+  margin-top: 40px;
+  padding: 8px 12px;
+  transition: background-color 0.3s ease;
 }
