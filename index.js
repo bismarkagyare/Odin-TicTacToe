@@ -58,15 +58,24 @@ const displayWinnerMessage = (() => {
 // game logic reside here
 const gameLogic = (() => {
   let players = [];
-  let gameOver;
+  let isGameOver;
   let currentPlayerIndex;
 
   const start = () => {
+    const player1NameInput = document.getElementById('player1');
+    const player2NameInput = document.getElementById('player2');
+  
+    if (!player1NameInput.value || !player2NameInput.value) {
+      alert('Please enter both player names to start the game.');
+      return;
+    }
+
     players = [
-      createPlayer(document.getElementById('player1').value, 'X'),
-      createPlayer(document.getElementById('player2').value, 'O')
+      createPlayer(player1NameInput.value, 'X'),
+      createPlayer(player2NameInput.value, 'O')
     ];
-    gameOver = false;
+  
+    isGameOver = false;
     currentPlayerIndex = 0;
     Gameboard.render();
     Gameboard.createGrid();
@@ -77,7 +86,7 @@ const gameLogic = (() => {
   }
 
   const handleClick = (e) => {
-    if (gameOver) return;
+    if (isGameOver) return;
     const index = +e.target.id;
     if (Gameboard.getGameboard()[index] !== '') return;
     Gameboard.updateSign(index, players[currentPlayerIndex].sign);
@@ -85,15 +94,15 @@ const gameLogic = (() => {
 
     //check for win 
     if (checkForWin(Gameboard.getGameboard(), players[currentPlayerIndex].mark)){
-      gameOver = true;
+      isGameOver = true;
       displayWinnerMessage.renderMessage(`${players[currentPlayerIndex].name} wins the round!`);
     } else if (checkForTie(Gameboard.getGameboard())) {
-      gameOver = true;
+      isGameOver = true;
       displayWinnerMessage.renderMessage(`its a tie`);
     }
     currentPlayerIndex = currentPlayerIndex === 0 ? 1 : 0;
 
-    if (gameOver) {
+    if (isGameOver) {
       document.getElementById('restart-button').classList.remove('hidden');
     }
   }
@@ -103,7 +112,7 @@ const gameLogic = (() => {
       Gameboard.updateSign(i, '');
     }
     Gameboard.render();
-    gameOver = false;
+    isGameOver = false;
     document.querySelector('.win-message').innerHTML = '';
   }
 
@@ -135,16 +144,6 @@ const checkForTie = (board) => {
   return board.every(cell => cell !== '');
 }
 
-function validateForm() {
-  const player1 = document.getElementById("player1").value;
-  const player2 = document.getElementById("player2").value;
-
-  if (player1 == "" || player2 == "") {
-    alert("Please fill in all fields.");
-    return false;
-  }
-}
-
 const startBtn = document.getElementById('start-button');
 startBtn.addEventListener('click', () => {
   gameLogic.start();
@@ -154,4 +153,4 @@ const restartBtn = document.getElementById('restart-button');
 restartBtn.addEventListener('click', () => {
   gameLogic.restart();
   Gameboard.createGrid();
-})
+});
