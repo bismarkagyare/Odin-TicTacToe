@@ -121,3 +121,66 @@ input[type=text] {
   padding: 8px 12px;
   transition: background-color 0.3s ease;
 }
+
+/* Mobile */
+@media screen and (max-width: 480px) {
+  body {
+    font-size: 14px;
+  }
+
+  h1 {
+    font-size: 3rem;
+  }
+
+  input[type="text"] {
+    width: 80%;
+    margin: 10px 0;
+  }
+
+  /* .gameboard {
+    width: 80%;
+    height: 80%;
+  } */
+}
+
+/* Tablet */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  body {
+    font-size: 16px;
+  }
+
+  h1 {
+    font-size: 4rem;
+  }
+
+  input[type="text"] {
+    width: 60%;
+    margin: 10px 0;
+  }
+
+  /* .gameboard {
+    width: 60%;
+    height: 60%;
+  } */
+}
+
+/* Desktop */
+@media screen and (min-width: 769px) {
+  body {
+    font-size: 16px;
+  }
+
+  h1 {
+    font-size: 5rem;
+  }
+
+  input[type="text"] {
+    width: 40%;
+    margin: 20px;
+  }
+
+  /* .gameboard {
+    width: 40%;
+    height: 40%;
+  } */
+}
